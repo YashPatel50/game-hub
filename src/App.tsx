@@ -9,7 +9,7 @@ function App() {
 
   return (
     <Grid
-      _dark={{ bg: "green" }}
+      _dark={{ bg: "Gray.800" }}
       templateAreas={{
         base: `"nav""main"`,
         lg: `"nav nav""aside main"`, //Bigger than 1024 pixels
