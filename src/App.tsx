@@ -10,7 +10,6 @@ function App() {
 
   return (
     <Grid
-      _dark={{ bg: "Gray.800" }}
       templateAreas={{
         base: `"nav""main"`,
         lg: `"nav nav""aside main"`, //Bigger than 1024 pixels
@@ -19,11 +18,11 @@ function App() {
       <GridItem area="nav">
         <NavBar></NavBar>
       </GridItem>
-      <GridItem area="aside" bg="gray.400" hideBelow="lg">
+      <GridItem area="aside" hideBelow="lg">
         {/*Hides this area if not in large screen*/}
         Aside
       </GridItem>
-      <GridItem area="main" bg="purple.400">
+      <GridItem area="main">
         <GameGrid />
       </GridItem>
     </Grid>

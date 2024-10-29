@@ -3,9 +3,10 @@ import { CanceledError } from "axios";
 import { useEffect, useState } from "react";
 
 //interface to define a game from api request
-interface Game {
+export interface Game {
     id: number;
     name: string;
+    background_image: string
   }
   
   //Interface to define the object returned from the api request
