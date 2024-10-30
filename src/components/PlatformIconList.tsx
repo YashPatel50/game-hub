@@ -12,13 +12,14 @@ import {
 import { MdPhoneIphone } from "react-icons/md";
 import { SiNintendo } from "react-icons/si";
 import { BsGlobe } from "react-icons/bs";
-import { IconType } from "react-icons";
+import { IconBase, IconType } from "react-icons";
 
 interface Props {
   platforms: Platform[];
 }
 
 const PlatformIconList = ({ platforms }: Props) => {
+  //Map to take string to IconType
   const iconMap: { [key: string]: IconType } = {
     pc: FaWindows,
     playstation: FaPlaystation,
@@ -32,13 +33,13 @@ const PlatformIconList = ({ platforms }: Props) => {
   };
 
   //Get the icon for each platform
+  //Modified so that IconType is able to work!!!!!
   return (
-    <HStack>
-      {platforms.map((platform) => (
-        <Icon key={platform.slug}>
-          <FaApple></FaApple>
-        </Icon>
-      ))}
+    <HStack marginY={"10px"}>
+      {platforms.map((platform) => {
+        const Icon = iconMap[platform.slug];
+        return <Icon key={platform.slug} color="#71717a"></Icon>;
+      })}
     </HStack>
   );
 };
