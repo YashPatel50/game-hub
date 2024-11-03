@@ -15,11 +15,15 @@ function App() {
         base: `"nav""main"`,
         lg: `"nav nav""aside main"`, //Bigger than 1024 pixels
       }}
+      templateColumns={{
+        base: "1fr", //1 fraction
+        lg: "200px 1fr",
+      }}
     >
       <GridItem area="nav">
         <NavBar></NavBar>
       </GridItem>
-      <GridItem area="aside" hideBelow="lg">
+      <GridItem area="aside" hideBelow="lg" paddingX="5px">
         {/*Hides this area if not in large screen*/}
         <GenreList></GenreList>
       </GridItem>

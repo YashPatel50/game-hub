@@ -18,7 +18,7 @@ const GameGrid = () => {
           lg: "repeat(3, 1fr)",
           xl: "repeat(5, 1fr)",
         }}
-        gap="10"
+        gap="3"
         padding="10px"
       >
         {isLoading &&
