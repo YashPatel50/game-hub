@@ -33,6 +33,9 @@ const PlatformIconList = ({ platforms }: Props) => {
     ios: MdPhoneIphone,
     web: BsGlobe,
     sega: SiSega,
+    atari: SiNintendo,
+    "commodore-amiga": FaWindows,
+    "3do": SiNintendo,
     "neo-geo": SiApplearcade,
   };
 
