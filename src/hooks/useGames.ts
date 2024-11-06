@@ -1,12 +1,6 @@
 import { GameQuery } from "@/App";
 import useData from "./useData";
-
-//interface for Platform
-export interface Platform {
-  id: number
-  name: string
-  slug: string
-}
+import { Platform } from "./usePlatforms";
 
 
 //interface to define a game from api request
@@ -16,6 +10,7 @@ export interface Game {
     background_image: string
     parent_platforms: {platform: Platform}[]
     metacritic: number
+    rating_top: number
   }
   
 const useGames = (gameQuery: GameQuery) =>
