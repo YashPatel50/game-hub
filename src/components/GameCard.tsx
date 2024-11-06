@@ -13,8 +13,7 @@ const GameCard = ({ game }: Props) => {
     <Card.Root key={game.id}>
       {/*Set the background image*/}
       <Image src={getCroppedImageUrl(game.background_image)}></Image>
-      <Card.Header fontSize={"2xl"}>{game.name}</Card.Header>
-      <Card.Body>
+      <Card.Body paddingTop={3} paddingBottom={0}>
         <HStack justifyContent={"space-between"}>
           {/*Get the available platforms for each game*/}
           <PlatformIconList
@@ -23,6 +22,9 @@ const GameCard = ({ game }: Props) => {
           <CriticScore score={game.metacritic} />
         </HStack>
       </Card.Body>
+      <Card.Header fontSize={"2xl"} marginBottom={3} paddingTop={0}>
+        {game.name}
+      </Card.Header>
     </Card.Root>
   );
 };
